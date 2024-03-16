@@ -75,12 +75,12 @@ class Delete_Node
 			}
 			
 			int k = sc.nextInt();
-			Node del = llist.search_Node(llist.head,k);
+			Node del_node = llist.search_Node(llist.head,k);
 			
 			Solution g = new Solution();
-			if(del != null && del.next != null)
+			if(del_node != null && del_node.next != null)
 			{
-				g.deleteNode(del);
+				g.deleteNode(del_node);
 			}
 			llist.printList(llist.head);
 		t--;
@@ -109,11 +109,11 @@ class Node
 //Function to delete a node without any reference to head pointer.
 class Solution
 {
-    void deleteNode(Node del)
+    void deleteNode(Node del_node)
     {
          // Your code here
-         del.data = del.next.data;
-         del.next = del.next.next;
+         del_node.data=del_node.next.data;
+         del_node.next=del_node.next.next;
     }
 }
 
